@@ -1,0 +1,154 @@
+<!doctype html>
+		<html class="no-js" lang="">
+		    <head>
+		        <meta charset="utf-8">
+		        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		        <title>#TheExplorer</title>
+		        <meta name="description" content="">
+		        <meta name="viewport" content="width=device-width, initial-scale=1">
+		        
+		        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+		        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		        <!-- Latest compiled and minified CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+				<!-- fontawesome -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+				<!-- animate.css -->
+				<link rel="stylesheet" href="css/animate.css">
+				<!-- main.css -->
+				<link rel="stylesheet" href="css/main.css">
+				 <!-- scrollMagic -->
+		            
+
+		    </head>
+		    <body id="preloaderBody">
+		        <!--[if lt IE 8]>
+		            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		        <![endif]-->
+		
+		        <!-- preloader -->
+				<div id="loader-wrapper">
+				    <div class="progressBar"><span id="progressData">0%</span></div>
+					<div id="loader"></div>
+				</div>
+
+				<!-- main content -->
+		        <div class="container-fluid" id="main">
+		        <div id="headerTitle">
+		        	<div class="headerTitleContent">	                    
+			        	<div class="theExplore">
+								<img id="movingCar" src="img/assets/movingCar.png" alt="movingCar">
+			        			<h3 id="site-name"><span>#theExploreR</span></h3>
+			        	</div>
+		        	</div>
+		        </div>
+		        <div id="cycleSlideshow">
+		        	<div id="cycle-slideshow"></div>
+		        	<div class="slide-control">
+						<a href="#" id="prevBtn"><i class="fa fa-2x fa-angle-left" aria-hidden="true"></i></a>
+						<a href="#" id="nextBtn"><i class="fa fa-2x fa-angle-right" aria-hidden="true"></i></a>
+		        	</div>
+		        </div>
+
+
+		        <script id="slideshowtpl" type="text/template">
+		        	{{#slideshow}}
+                         <div class="slideshow-container">
+                         	<img src="img/slider/{{shortname}}.jpg" alt="{{shortname}}" title="Photo of {{name}}">
+                         </div>
+                     {{/slideshow}}
+		        </script>
+		       
+		        	<div class="sectionItems" id="intro1">
+		        		<div class="row contentItems">
+		        		  <div class="contentLeft boxtwo">
+		        		  	<img src="img/boxes/dianepascual.jpg" alt="dianepascual">
+		        		  </div>
+		        		  <div class="contentRight boxtwo">
+		        		  	 <div class="content" id="dummyContent"></div>
+		        		  </div> 
+		        		 </div>
+		        		
+		        		</div>
+		        	<div class="sectionItems" id="intro2">		        	
+		        		<div class="contentItems container-fluid">		        			
+		        			<div class="row intro2-grid container ">
+		        			<div class="sectionHeader"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi porro nemo consequuntur nostrum amet beatae consequatur distinctio cum tempore. Tenetur tempore, commodi, inventore veritatis possimus exercitationem. Saepe amet numquam possimus!</h2></div>
+		        				<div class="intro2-child">
+		        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque architecto rem dolorum similique doloribus ea quo commodi, dignissimos dolores repellendus iure laudantium pariatur natus unde harum a sed perferendis accusamus.</p>
+		        		         <div class="consoleStyle"></div>
+		        				</div>
+
+		        				<div class="intro2-child">
+		        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque architecto rem dolorum similique doloribus ea quo commodi, dignissimos dolores repellendus iure laudantium pariatur natus unde harum a sed perferendis accusamus.</p>
+		        					 <div class="consoleStyle"></div>
+		        				</div>
+
+		        				<div class="intro2-child">
+		        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque architecto rem dolorum similique doloribus ea quo commodi, dignissimos dolores repellendus iure laudantium pariatur natus unde harum a sed perferendis accusamus.</p>
+		        					 <div class="consoleStyle"></div>
+		        				</div>		        				
+		        			</div>
+		        	</div>	
+		        </div>
+		        <div class="sectionItems" id="intro3">
+		        	<div class="content" id="imgBgContent">
+		        	 	<h2>Position and timing</h2>
+		        	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, nihil dolore eveniet eaque itaque asperiores natus nostrum velit nisi similique inventore nesciunt impedit voluptates officia, perferendis omnis alias, hic harum?</p>
+		        	 </div>
+		        	 <div class="content" id="parallaxImg"></div>
+		        </div>
+             <div class="sectionItems" id="intro4">
+                   <div class="content"><h2 class=" fadeIN">Lorem ipsum dolor sit amet, consectetur repellat enim.</h2></div>  
+
+		     </div>	  
+		    <div class="sectionItems" id="intro5">
+		    	<div class="boxgrid" id="pinElement">
+					<div class="boxgridChild">
+		    			<h2>Lorem ipsum dolor sit amet, quaerat voluptatum.</h2>
+		    		</div>
+		    	</div>
+		    	<div class="boxgrid"><img src="img/boxes/samuelnota.jpg" alt="samuelnota"></div>
+		    </div>	
+		    <div class="sectionItems" id="intro6">
+		    	<div class="boxgrid">
+		    		<div class="boxgridChild">
+		    			<h2>Lorem ipsum dolor sit amet, quaerat voluptatum.</h2>
+		    		</div>
+		    	</div>
+		    	<div class="boxgrid"><img src="img/boxes/lancewieland.jpg" alt="lancewieland"></div>
+		    </div>  
+
+		     <div class="sectionItems" id="intro7">
+			       <div id="infoMe"></div>
+			       <div id="boxFooter"></div>		    	
+		    </div>  
+
+
+		    </div> <!-- end of #main -->
+			<!-- jQuery -->
+			<script src="js/lib/jquery-3.1.1.js"></script>	
+			<!-- js.mustache -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>	
+			<!-- jquery.cycle -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+			                    
+			<!-- scrollMagic -->
+			<script src="js/lib/ScrollMagic.js"></script>
+			<script src="js/lib/ScrollToPlugin.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+			<script src="js/lib/TweenMax.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js"></script>
+			<script src="js/lib/animation.gsap.js"> </script>
+			<!-- GSAP -->
+			<!-- custom-code -->
+			<script src="js/dummy-content.js"></script>
+			<script src="js/custom-loader.js"></script>
+			<script src="js/main.js"></script>			
+			<script src="js/custom-slider.js"></script>
+			<script src="js/custom-animation.js"></script>
+			<script src="js/custom-footer.js"></script>
+		    </body>
+		</html>		
