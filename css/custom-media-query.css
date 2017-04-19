@@ -1,0 +1,31 @@
+
+
+/*custom-media-query.css*/
+
+
+/* max 320 */
+@media (max-width: 320px) {
+	#intro1 .row {
+		height: 100%;
+		flex-direction: column;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	.boxtwo {
+		flex-basis: 100% !important;
+	}
+	#mapId {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100vh;
+	}
+	#intro5 .boxgrid,
+	#intro6 .boxgrid	{
+		flex-basis: 100%;
+	}
+	#intro6 .boxgrid:first-child {
+		order: 1;
+	}
+	
+}/*end*/

@@ -1,0 +1,19 @@
+{
+  "fname": "Glen Mark",
+  "lname": "Cabiladas",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque ",
+  "connect": [
+    {
+      "Twitter": "https://www.twitter.com/"
+    },
+    {
+      "Facebook": "https://www.facebook.com/"
+    },
+    {
+      "Google": "https://www.google.com/"
+    },
+    {
+      "LinkendIn": "https://www.linkendIn.com/"
+    }
+  ]
+}
