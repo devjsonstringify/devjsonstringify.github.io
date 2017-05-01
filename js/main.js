@@ -46,30 +46,6 @@ $(document).ready(function () {
             .addTo(controller) //controller
     }); //each
 
-
-    //weather and map areas
-    var titleAnimation = new TimelineMax();
-    titleAnimation
-        .from('.typographyTitle h1', 1, {
-            ease: Sine.easeOut,
-            y: 300,
-            scale: 0.5,
-            opacity: 0.1
-        })
-        .from('#search-city', 2, {
-            autoAlpha: 0,
-            ease: Sine.easeOut
-        }, 1); //titleAnimation
-
-    var mapWeather = new ScrollMagic.Scene({
-            triggerElement: "#intro1",
-            reverse: false
-        }) //mapWeather
-        .setClassToggle('#intro1', 'showMapWeather')
-        .setTween(titleAnimation)
-        .addTo(controller);
-
-
     //Parallax  and Timeline
 
     var parallaxTimeLine = new TimelineMax();

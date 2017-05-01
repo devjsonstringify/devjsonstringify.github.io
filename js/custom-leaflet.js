@@ -1,4 +1,4 @@
-    //get geolocation	
+/*    //get geolocation	
     window.onload = function () {
 
         setTimeout(function () {
@@ -30,4 +30,4 @@
                 document.write('Your browser does not support GeoLocation :(');
             }
         }, 2000); //seTimeOut
-    } //onload
+    } //onload*/

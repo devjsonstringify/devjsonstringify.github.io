@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="js/lib/leaflet-openweathermap.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -22,7 +21,7 @@
 
 </head>
 
-<body id="preloaderBody">
+<body id="preloaderBody" data-spy="scroll" data-target=".navbar">
     <!--[if lt IE 8]>
 		            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		        <![endif]-->
@@ -31,50 +30,78 @@
         <div class="progressBar"><span id="progressData">0%</span></div>
         <div id="loader"></div>
     </div>
-    <!-- main content -->
+    <!--loader-wrapper-->
     <div class="container-fluid" id="main">
-        <div id="headerTitle">
-            <div class="headerTitleContent">
-                <div class="theExplore">
-                    <img id="movingCar" src="img/assets/movingCar.png" alt="movingCar">
-                    <h3 id="site-name"><span>#theExploreR</span></h3>
+
+        <!--alert-message-->
+        <div class="container" id="alertDisplay">
+            <section id="formErrorMessage">
+                <div class="hidden alert alert-warning alert-dismissible fade in" role="alert">
+                    <button type="button" id="closeFindBtn"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Please double check your city name..
+                </div>
+            </section>
+        </div>
+        <!-- main content -->
+        <div class="navbar-wrapper" id="menuParent">
+            <nav class="navbar navbar-static-top offset-3 pull right">
+                <div class="container=fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand pull left" href="#">#theExploreR</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="#home">home</a></li>
+                            <li><a href="">Page 2</a></li>
+                            <li><a href="">Page 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--menuParent-->
+        <div class="sectionItems" id="home">
+            <div id="headerTitle">
+                <div class="headerTitleContent">
+                    <div class="theExplore">
+                        <img id="movingCar" src="img/assets/movingCar.png" alt="movingCar">
+                        <h3 id="site-name"><span>#theExploreR</span></h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="cycleSlideshow">
-            <div id="cycle-slideshow"></div>
-            <div class="slide-control">
-                <a href="#" id="prevBtn"><i class="fa fa-2x fa-angle-left" aria-hidden="true"></i></a>
-                <a href="#" id="nextBtn"><i class="fa fa-2x fa-angle-right" aria-hidden="true"></i></a>
+            <div id="cycleSlideshow">
+                <div id="cycle-slideshow"></div>
+                <div class="slide-control">
+                    <a href="#" id="prevBtn"><i class="fa fa-2x fa-angle-left" aria-hidden="true"></i></a>
+                    <a href="#" id="nextBtn"><i class="fa fa-2x fa-angle-right" aria-hidden="true"></i></a>
+                </div>
             </div>
+            <script id="slideshowtpl" type="text/template">
+                {{#slideshow}}
+                <div class="slideshow-container">
+                    <img src="img/slider/{{shortname}}.jpg" alt="{{shortname}}" title="Photo of {{name}}">
+                </div>
+                {{/slideshow}}
+            </script>
         </div>
-        <script id="slideshowtpl" type="text/template">
-            {{#slideshow}}
-            <div class="slideshow-container">
-                <img src="img/slider/{{shortname}}.jpg" alt="{{shortname}}" title="Photo of {{name}}">
-            </div>
-            {{/slideshow}}
-        </script>
-
+        <!--home-->
         <div class="sectionItems" id="intro1">
             <div class="typographyTitle">
                 <h1>Weather API & Geolocation</h1>
             </div>
-            <div class="row contentItems">
+            <div class="row contentItems">              
                 <div class="contentLeft boxtwo">
-                    <div id="mapId"></div> 
+                    <div id="mapId"></div>
                 </div>
                 <div class="contentRight boxtwo">
                     <div id="weather-search-container"></div>
                     <div id="weather-container-container">
-                        <div id="search-city" class="input-group">
-                            <input class="searchInput" id="userCity" type="text" class="form-control" placeholder="Search for city...">
-                            <input class="searchInput" id="userCountryCode" type="text" class="form-control" placeholder="Country code..">
-                            <span class="input-group-btn">
-                                    <button id="findMyCity" class="btn btn-default" type="button">find</button>
-                              </span>
-                        </div>
-                        <!-- /input-group -->
                         <div id="weather-container-info"></div>
                         <div id="weather-container"></div>
                     </div>
@@ -90,7 +117,7 @@
         </div>
         <div class="sectionItems" id="intro4">
             <div class="content">
-                <h2 class=" fadeIN">Lorem ipsum dolor sit amet, consectetur repellat enim.</h2>
+                 <div class="newsParent"></div>
             </div>
         </div>
         <div class="sectionItems" id="intro5">
@@ -117,6 +144,9 @@
     <!-- end of #main -->
     <!-- jQuery -->
     <script src="js/lib/jquery-3.1.1.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- leaflet -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
     <!-- js.mustache -->
@@ -140,6 +170,7 @@
     <script src="js/custom-loader.js"></script>
     <script src="js/main.js"></script>
     <script src="js/custom-weather.js"></script>
+    <script src="js/custom-news.js"></script>
     <script src="js/custom-leaflet.js"></script>
     <script src="js/custom-map.js"></script>
     <script src="js/custom-slider.js"></script>
