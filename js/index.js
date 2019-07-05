@@ -1,28 +1,27 @@
 const instance = new TypeIt('#js-typeWriter', {
 	strings: [
-		'HTML4/5',
-		'CSS2/3',
-		'JavaScript',
-		'Jquery',
-		'React',
-		'Router',
-		'Sass',
+		'HTML5',
+		'CSS3 and preprocessor',
+		'JavaScript ES6 and beyond',
+		'React stack [Router-Redux]',
 		'Php',
 		'MySql',
-		'Joomla',
-		'WordPress',
-		'Linux scripting',
-		'Web API',
-		'Browser API',
+		'Content Management System',
+		'Bash scripting',
+		'Web and Browser API',
 		'RESTful services',
 		'Ajax',
 		'Webpack',
 		'Version Control',
 		'NPM',
-		'Chrome/Firefox  Developer tools'
+		'Developer tools'
 	],
 	speed: 50,
 	breakLines: false,
 	waitUntilVisible: true,
 	loop: true
 }).go()
+
+//Dynamic copyright
+const copyright = new Date().getFullYear()
+document.querySelector('#js-copyright').innerText = copyright

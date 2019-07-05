@@ -18,7 +18,41 @@
 }
 
 /* typewriter */
+.article-wrapper {
+	min-height: 50px;
+}
+
 #js-typeWriter {
 	font-family: 'Special Elite', cursive;
-	font-size: 1.5em;
+	font-size: 1em;
+	color: #2a8642;
+	font-weight: 600;
+}
+
+/*footer*/
+footer::first-child {
+	position: relative;
+}
+footer::first-child::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	display: block;
+	right: 0;
+	height: 1px;
+	top: -7px;
+	background: #c8cccf;
+	width: calc(100% / 2);
+	margin: 0 auto;
+	z-index: 1;
+}
+
+.get-in-touch + p + a {
+	padding: 10px;
+	background-color: #85bf31;
+	color: #ffffff;
+	font-weight: 700;
+	margin: 0 0 0 0;
+	position: relative;
+	border-radius: 3px;
 }
