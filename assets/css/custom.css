@@ -25,7 +25,7 @@
 #js-typeWriter {
 	font-family: 'Special Elite', cursive;
 	font-size: 1em;
-	color: #2a8642;
+	color: #ff0008;
 	font-weight: 600;
 }
 
@@ -49,7 +49,7 @@ footer::first-child::before {
 
 .get-in-touch + p + a {
 	padding: 10px;
-	background-color: #85bf31;
+	background-color: #ff0008;
 	color: #ffffff;
 	font-weight: 700;
 	margin: 0 0 0 0;
