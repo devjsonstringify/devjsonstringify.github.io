@@ -1,21 +1,9 @@
+const skillsString = "JavaScript/TypeScript • ReactJS/NextJS • Node/Express.js • HTML5/CSS/Sass • Relational (SQL) and NoSQL databases • Version Control • RESTful services • Agile Methodologies • Python • Power BI • GraphQL • RESTful services • Socket.io, Redis (Real-time messaging for event-driven architecture.) • Firebase cloud messaging • gRPC • microservices • Technical leadership • FastAPI";
+
+const skillsArray = skillsString.split(' • ');
+
 const instance = new TypeIt('#js-typeWriter', {
-	strings: [
-		'HTML5',
-		'CSS3 and preprocessor',
-		'JavaScript ES6 and beyond',
-		'React stack [Router-Redux]',
-		'Php',
-		'MySql',
-		'Content Management System',
-		'Bash scripting',
-		'Web and Browser API',
-		'RESTful services',
-		'Ajax',
-		'Webpack',
-		'Version Control',
-		'NPM',
-		'Developer tools'
-	],
+	strings: skillsArray,
 	speed: 50,
 	breakLines: false,
 	waitUntilVisible: true,
